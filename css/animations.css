@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Animations — GSAP-driven classes
+   ========================================================================== */
+
+/* Reveal elements */
+.reveal { opacity: 0; }
+.reveal-up { opacity: 0; transform: translateY(60px); }
+.reveal-left { opacity: 0; transform: translateX(-60px); }
+.reveal-right { opacity: 0; transform: translateX(60px); }
+.reveal-scale { opacity: 0; transform: scale(0.9); }
+
+/* Char/word split text (GSAP will handle animation) */
+.split-text .word {
+  display: inline-block;
+  overflow: hidden;
+}
+.split-text .char {
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+/* Parallax image containers */
+.parallax-img {
+  overflow: hidden;
+}
+.parallax-img img {
+  will-change: transform;
+}
+
+/* Image reveal (mask wipe) */
+.img-reveal {
+  position: relative;
+  overflow: hidden;
+}
+/* GSAP handles reveal via clipPath on the .img-reveal element itself */
+
+/* Line draw */
+.line-draw {
+  width: 60px;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* Stagger items (GSAP handles) */
+.stagger-item { opacity: 0; transform: translateY(40px); }
+
+/* Horizontal scroll for about */
+.horizontal-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-2xl);
+  will-change: transform;
+}
+.horizontal-scroll-panel {
+  flex-shrink: 0;
+  width: 85vw;
+  max-width: 600px;
+}
+
+/* Counter */
+.counter-number {
+  font-family: var(--font-serif);
+  color: var(--orange);
+  line-height: 1;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale,
+  .stagger-item {
+    opacity: 1;
+    transform: none;
+  }
+  .marquee-track { animation: none; }
+}

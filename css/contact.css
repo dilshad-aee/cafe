@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Contact Page
+   ========================================================================== */
+
+.contact-hero {
+  padding: 160px 0 80px;
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+}
+.contact-hero .section-title { color: var(--white); }
+.contact-hero .section-desc { color: rgba(255,255,255,0.5); }
+
+/* Contact grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  margin-top: var(--space-3xl);
+}
+
+.contact-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.contact-cards-list .contact-card {
+  background: var(--gray-50);
+  border-color: var(--gray-200);
+}
+.contact-cards-list .contact-label { color: var(--gray-400); }
+.contact-cards-list .contact-value { color: var(--gray-900); }
+.contact-cards-list .contact-value a { color: var(--gray-900); }
+.contact-cards-list .contact-value a:hover { color: var(--orange); }
+.contact-cards-list .contact-card:hover {
+  background: var(--cream);
+  border-color: var(--orange);
+}
+
+.contact-map-wrapper {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  aspect-ratio: 1 / 1;
+}
+.contact-map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* WhatsApp CTA */
+.wa-cta {
+  margin-top: var(--space-4xl);
+  text-align: center;
+  padding: var(--space-3xl);
+  background: #25D366;
+  border-radius: var(--radius-2xl);
+  color: var(--white);
+}
+.wa-cta h3 {
+  font-size: var(--fs-2xl);
+  color: var(--white);
+  margin-bottom: var(--space-md);
+}
+.wa-cta p {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: var(--space-xl);
+}
+.wa-cta .btn {
+  background: var(--white);
+  color: #25D366;
+}
+.wa-cta .btn:hover {
+  background: var(--gray-100);
+}
+
+@media (max-width: 768px) {
+  .contact-hero { padding: 120px 0 48px; }
+  .contact-grid { grid-template-columns: 1fr; gap: var(--space-2xl); }
+  .contact-map-wrapper { aspect-ratio: 4 / 3; }
+  .wa-cta { padding: var(--space-2xl); }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Menu | Malabar Bakes Pannicode — Shawarma, Cakes, Juices & More</title>
+  <meta name="description" content="Explore the full menu at Malabar Bakes — fresh shawarma, crispy fried chicken, custom cakes, natural juices, Malabar snacks, and more. Order online now!">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://malabarbakes.netlify.app/menu.html">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="transition-overlay" id="transition-overlay"></div>
+
+  <header class="nav-wrapper scrolled" id="nav-wrapper">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Malabar Bakes" width="44" height="44"><span class="logo-text">Malabar Bakes</span></a>
+      <div class="nav-overlay" id="nav-overlay"></div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link active">Menu</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="https://wa.me/919072460008?text=Hi!%20I'd%20like%20to%20place%20an%20order." class="nav-cta" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Order Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main class="page-wrapper">
+
+      <!-- Hero -->
+      <section class="menu-hero">
+        <div class="container">
+          <p class="section-tag reveal-up"><i class="fas fa-utensils"></i> Our Menu</p>
+          <h1 class="section-title reveal-up" style="font-size: clamp(2.5rem, 6vw, 4rem);">Our Specialties</h1>
+          <p class="section-desc centered reveal-up">Handpicked favorites from our kitchen — crafted to perfection with authentic Malabar flavors.</p>
+        </div>
+      </section>
+
+      <!-- Menu -->
+      <section class="section">
+        <div class="container">
+          <div class="menu-tabs reveal-up">
+            <button class="menu-tab active" data-filter="all">All Items</button>
+            <button class="menu-tab" data-filter="mains">Mains</button>
+            <button class="menu-tab" data-filter="snacks">Snacks</button>
+            <button class="menu-tab" data-filter="drinks">Drinks</button>
+            <button class="menu-tab" data-filter="desserts">Desserts</button>
+          </div>
+
+          <div class="menu-grid">
+            <article class="food-card stagger-item" data-category="mains">
+              <div class="food-card-img"><img src="images/shawarma.png" alt="Fresh shawarma wrap" width="400" height="300" loading="lazy"><span class="food-card-price">₹80+</span></div>
+              <div class="food-card-body"><h3>Fresh Shawarma</h3><p>Juicy grilled meat wrapped in soft bread with fresh veggies and special sauces</p></div>
+            </article>
+            <article class="food-card stagger-item" data-category="mains">
+              <div class="food-card-img"><img src="images/fried-chicken.png" alt="Crispy fried chicken" width="400" height="300" loading="lazy"><span class="food-card-price">₹140+</span></div>
+              <div class="food-card-body"><h3>Fried Chicken</h3><p>Crispy and juicy fried chicken with authentic Malabar spices</p></div>
+            </article>
+            <article class="food-card stagger-item" data-category="mains">
+              <div class="food-card-img"><img src="images/burgers-sandwiches.png" alt="Gourmet burgers" width="400" height="300" loading="lazy"><span class="food-card-price">₹90+</span></div>
+              <div class="food-card-body"><h3>Burgers & Sandwiches</h3><p>Fresh burgers and sandwiches made with premium ingredients</p></div>
+            </article>
+            <article class="food-card stagger-item" data-category="snacks">
+              <div class="food-card-img"><img src="images/malabar-snacks.png" alt="Malabar snacks" width="400" height="300" loading="lazy"><span class="food-card-price">₹99+</span></div>
+              <div class="food-card-body"><h3>Malabar Snacks</h3><p>Traditional sweets and savory snacks with authentic flavors</p></div>
+            </article>
+            <article class="food-card stagger-item" data-category="desserts">
+              <div class="food-card-img"><img src="images/pudding-cakes.png" alt="Pudding cakes" width="400" height="300" loading="lazy"><span class="food-card-price">₹20+</span></div>
+              <div class="food-card-body"><h3>Pudding Cakes</h3><p>Moist cakes made with dates, carrot, banana & chocolate</p></div>
+            </article>
+            <article class="food-card stagger-item" data-category="desserts">
+              <div class="food-card-img"><img src="images/halwa.png" alt="Malabar Halwa" width="400" height="300" loading="lazy"><span class="food-card-price">₹99+</span></div>
+              <div class="food-card-body"><h3>Malabar Halwa</h3><p>Traditional sweet treat with authentic Malabar flavors</p></div>
+            </article>
+            <article class="food-card stagger-item" data-category="desserts">
+              <div class="food-card-img"><img src="images/cakes.png" alt="Custom cakes" width="400" height="300" loading="lazy"><span class="food-card-price">₹350+</span></div>
+              <div class="food-card-body"><h3>Custom Cakes</h3><p>Beautiful cakes for birthdays, weddings & special occasions</p></div>
+            </article>
+            <article class="food-card stagger-item" data-category="drinks">
+              <div class="food-card-img"><img src="images/shakes.png" alt="Fresh shakes" width="400" height="300" loading="lazy"><span class="food-card-price">₹99+</span></div>
+              <div class="food-card-body"><h3>Fresh Shakes</h3><p>Creamy and refreshing milkshakes with delicious flavors</p></div>
+            </article>
+          </div>
+
+          <div class="menu-promo reveal-scale">
+            <h3>Want to Order?</h3>
+            <p>Send us a message on WhatsApp and we'll prepare your favorites!</p>
+            <a href="https://wa.me/919072460008?text=Hi!%20I'd%20like%20to%20place%20an%20order." class="btn btn-primary magnetic" target="_blank" rel="noopener"><span><i class="fab fa-whatsapp"></i> Order on WhatsApp</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <div class="footer-logo"><img src="images/logo.png" alt="Malabar Bakes" width="40" height="40"><span>Malabar Bakes</span></div>
+              <p>Premium bakery and café in Pannicode, Kozhikode. Serving fresh shawarma, baked goods, juices, and more since 12+ years.</p>
+              <div class="footer-social">
+                <a href="https://instagram.com/malabarbakes_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/919072460008" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              </div>
+            </div>
+            <div><h4 class="footer-heading">Pages</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div><h4 class="footer-heading">Specialties</h4><ul class="footer-links"><li><a href="menu.html">Fresh Shawarma</a></li><li><a href="menu.html">Fried Chicken</a></li><li><a href="menu.html">Custom Cakes</a></li><li><a href="menu.html">Fresh Juices</a></li></ul></div>
+          </div>
+          <div class="footer-bottom"><p>© <span id="year">2024</span> Malabar Bakes. All rights reserved.</p><p>Pannikkode Bus Stop, Mavoor Road, Kozhikode, Kerala 673602</p></div>
+        </div>
+      </footer>
+  </main>
+
+  <a href="https://wa.me/919072460008?text=Hi!%20I'd%20like%20to%20place%20an%20order." class="wa-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <script src="js/animations.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

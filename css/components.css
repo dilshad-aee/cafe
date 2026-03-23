@@ -1,0 +1,317 @@
+/* ==========================================================================
+   Components — Buttons, Cards, Marquee
+   ========================================================================== */
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  padding: 16px 36px;
+  border-radius: var(--radius-full);
+  transition: all 0.35s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s var(--ease-out);
+  z-index: 0;
+}
+.btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.btn span, .btn i { position: relative; z-index: 1; }
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--white);
+}
+.btn-primary::before { background: var(--orange-dark); }
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(255, 107, 53, 0.3);
+}
+
+.btn-dark {
+  background: var(--gray-900);
+  color: var(--white);
+}
+.btn-dark::before { background: var(--black); }
+.btn-dark:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--gray-300);
+  color: var(--gray-800);
+}
+.btn-outline::before { background: var(--gray-900); }
+.btn-outline:hover {
+  color: var(--white);
+  border-color: var(--gray-900);
+  transform: translateY(-3px);
+}
+
+.btn-outline-light {
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  color: var(--white);
+}
+.btn-outline-light::before { background: rgba(255,255,255,0.12); }
+.btn-outline-light:hover {
+  border-color: rgba(255,255,255,0.5);
+  transform: translateY(-3px);
+}
+
+/* For magnetic effect via JS */
+.magnetic { display: inline-block; }
+
+/* ── MARQUEE ── */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+.marquee-track {
+  display: inline-flex;
+  animation: marquee 25s linear infinite;
+}
+.marquee-item {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--fs-xl), 3vw, var(--fs-3xl));
+  color: var(--gray-300);
+  padding: 0 var(--space-2xl);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+.marquee-item .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange);
+  flex-shrink: 0;
+}
+.marquee.dark { border-color: rgba(255,255,255,0.06); }
+.marquee.dark .marquee-item { color: rgba(255,255,255,0.15); }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── FOOD CARD (3D Tilt) ── */
+.food-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.4s var(--ease-out);
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+.food-card:hover {
+  box-shadow: var(--shadow-xl);
+}
+.food-card-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.food-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease-out);
+}
+.food-card:hover .food-card-img img {
+  transform: scale(1.08);
+}
+.food-card-price {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  z-index: 2;
+}
+.food-card-body {
+  padding: 20px 24px 24px;
+}
+.food-card-body h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: 8px;
+}
+.food-card-body p {
+  font-size: var(--fs-sm);
+  color: var(--gray-500);
+  line-height: 1.7;
+}
+
+/* ── FEATURE CARD ── */
+.feature-card {
+  padding: 44px 36px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  transition: all 0.4s var(--ease-out);
+}
+.feature-card:hover {
+  border-color: transparent;
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px);
+}
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--cream);
+  color: var(--orange);
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-lg);
+  transition: all 0.35s var(--ease-out);
+}
+.feature-card:hover .feature-icon {
+  background: var(--orange);
+  color: var(--white);
+  transform: scale(1.08);
+}
+.feature-card h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-sm);
+}
+.feature-card p {
+  font-size: var(--fs-sm);
+  color: var(--gray-500);
+  line-height: 1.8;
+}
+
+/* ── CONTACT CARD ── */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 28px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-md);
+  transition: all 0.35s var(--ease-out);
+}
+.contact-card:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateX(8px);
+}
+.contact-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--orange-glow);
+  border-radius: var(--radius-sm);
+  color: var(--orange);
+  font-size: var(--fs-md);
+}
+.contact-label {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 4px;
+}
+.contact-value {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--white);
+}
+.contact-value a {
+  color: var(--white);
+  transition: color 0.3s var(--ease-out);
+}
+.contact-value a:hover { color: var(--orange); }
+
+/* ── TESTIMONIAL ── */
+.testimonial-card {
+  text-align: center;
+  padding: 56px 48px;
+  background: var(--gray-50);
+  border-radius: var(--radius-xl);
+}
+.testimonial-stars {
+  color: #F59E0B;
+  font-size: var(--fs-md);
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+.testimonial-text {
+  font-size: var(--fs-md);
+  color: var(--gray-700);
+  font-style: italic;
+  line-height: 1.9;
+  margin-bottom: 28px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonial-author {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+/* Slider dots */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: var(--space-xl);
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gray-300);
+  border: none;
+  padding: 0;
+  transition: all 0.35s var(--ease-out);
+}
+.dot.active {
+  background: var(--orange);
+  width: 28px;
+  border-radius: 4px;
+}
+
+/* ── Responsive Components ── */
+@media (max-width: 768px) {
+  .btn { padding: 14px 28px; font-size: var(--fs-sm); }
+  .food-card-body { padding: 16px 18px 20px; }
+  .food-card-body h3 { font-size: var(--fs-base); }
+  .food-card-body p { font-size: var(--fs-xs); }
+  .feature-card { padding: 32px 24px; }
+  .testimonial-card { padding: 36px 24px; }
+  .testimonial-text { font-size: var(--fs-sm); }
+  .contact-card { padding: 20px; }
+}
