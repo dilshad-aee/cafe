@@ -59,10 +59,35 @@
   margin-bottom: var(--space-xl);
 }
 
+/* Per-item Order Button */
+.food-card-order {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 8px 18px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: var(--orange);
+  color: var(--white);
+  transition: all 0.3s var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+.food-card-order:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 107, 53, 0.25);
+}
+.food-card-order:active {
+  transform: scale(0.97);
+}
+
 @media (max-width: 768px) {
   .menu-hero { padding: 120px 0 48px; }
   .menu-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
   .menu-tab { font-size: var(--fs-xs); padding: 8px 16px; }
+  .food-card-order { width: 100%; justify-content: center; padding: 10px 18px; }
 }
 @media (max-width: 480px) {
   .menu-grid { grid-template-columns: 1fr; }

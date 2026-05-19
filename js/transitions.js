@@ -24,15 +24,29 @@ function initTransitions() {
     link.addEventListener('click', function(e) {
       e.preventDefault();
       const dest = href;
+
+      // On mobile/touch devices, skip the overlay animation entirely for reliability
+      const isMobile = window.innerWidth <= 768 || 'ontouchstart' in window;
+      if (isMobile) {
+        window.location.href = dest;
+        return;
+      }
+
       const overlay = document.getElementById('transition-overlay');
 
       if (overlay) {
+        // Safety timeout: navigate even if GSAP animation stalls
+        const safetyTimer = setTimeout(() => {
+          window.location.href = dest;
+        }, 600);
+
         gsap.to(overlay, {
           scaleY: 1,
           transformOrigin: 'bottom',
           duration: 0.4,
           ease: 'power3.inOut',
           onComplete: () => {
+            clearTimeout(safetyTimer);
             window.location.href = dest;
           }
         });

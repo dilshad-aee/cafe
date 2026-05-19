@@ -25,12 +25,13 @@
   transform-origin: right;
   transition: transform 0.5s var(--ease-out);
   z-index: 0;
+  pointer-events: none;
 }
 .btn:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
-.btn span, .btn i { position: relative; z-index: 1; }
+.btn span, .btn i { position: relative; z-index: 1; pointer-events: none; }
 
 .btn-primary {
   background: var(--orange);

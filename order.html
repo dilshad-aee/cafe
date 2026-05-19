@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Online | Malabar Bakes Pannicode — Fresh Shawarma, Cakes & More</title>
+  <meta name="description" content="Order your favorite shawarma, fried chicken, cakes, juices & more from Malabar Bakes Pannicode. Fill your details and checkout via WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://malabarbakes.netlify.app/order.html">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/order.css">
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="transition-overlay" id="transition-overlay"></div>
+
+  <header class="nav-wrapper scrolled" id="nav-wrapper">
+    <nav class="nav">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Malabar Bakes" width="44" height="44"><span class="logo-text">Malabar Bakes</span></a>
+      <div class="nav-overlay" id="nav-overlay"></div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="order.html" class="nav-cta"><i class="fas fa-shopping-bag"></i> Order Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main class="page-wrapper">
+
+    <!-- Hero -->
+    <section class="order-hero">
+      <div class="container">
+        <p class="section-tag reveal-up"><i class="fas fa-shopping-bag"></i> Order Online</p>
+        <h1 class="section-title reveal-up" style="font-size: clamp(2rem, 5vw, 3.5rem);">Place Your Order</h1>
+        <p class="section-desc centered reveal-up">Pick your favorites, fill your delivery details, and checkout via WhatsApp — it's that simple!</p>
+
+        <!-- Steps -->
+        <div class="order-steps reveal-up">
+          <div class="order-step active" data-step="1">
+            <span class="step-number">1</span>
+            <span class="step-label">Select Items</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="order-step" data-step="2">
+            <span class="step-number">2</span>
+            <span class="step-label">Delivery Details</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="order-step" data-step="3">
+            <span class="step-number">3</span>
+            <span class="step-label">Checkout</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Content -->
+    <section class="section">
+      <div class="container">
+        <div class="order-layout">
+
+          <!-- Left: Panels -->
+          <div class="order-panels">
+
+            <!-- STEP 1: Menu Items -->
+            <div class="order-panel active" id="panel-menu">
+              <div class="order-menu-grid" id="order-menu-grid">
+
+                <!-- Shawarma -->
+                <div class="order-item" data-name="Fresh Shawarma" data-price="80">
+                  <div class="order-item-img">
+                    <img src="images/shawarma.png" alt="Fresh Shawarma" width="400" height="250" loading="lazy">
+                    <span class="order-item-price">₹80</span>
+                  </div>
+                  <div class="order-item-info">
+                    <h4>Fresh Shawarma</h4>
+                    <p>Juicy grilled meat wrapped in soft bread with fresh veggies and special sauces</p>
+                    <div class="order-item-actions">
+                      <div class="qty-selector">
+                        <button class="qty-btn qty-minus" aria-label="Decrease">−</button>
+                        <span class="qty-value">0</span>
+                        <button class="qty-btn qty-plus" aria-label="Increase">+</button>
+                      </div>
+                      <button class="order-item-btn" aria-label="Quick order Fresh Shawarma"><i class="fab fa-whatsapp"></i> Order Now</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fried Chicken -->
+                <div class="order-item" data-name="Fried Chicken" data-price="140">
+                  <div class="order-item-img">
+                    <img src="images/fried-chicken.png" alt="Fried Chicken" width="400" height="250" loading="lazy">
+                    <span class="order-item-price">₹140</span>
+                  </div>
+                  <div class="order-item-info">
+                    <h4>Fried Chicken</h4>
+                    <p>Crispy and juicy fried chicken with authentic Malabar spices</p>
+                    <div class="order-item-actions">
+                      <div class="qty-selector">
+                        <button class="qty-btn qty-minus" aria-label="Decrease">−</button>
+                        <span class="qty-value">0</span>
+                        <button class="qty-btn qty-plus" aria-label="Increase">+</button>
+                      </div>
+                      <button class="order-item-btn" aria-label="Quick order Fried Chicken"><i class="fab fa-whatsapp"></i> Order Now</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Burgers & Sandwiches -->
+                <div class="order-item" data-name="Burgers & Sandwiches" data-price="90">
+                  <div class="order-item-img">
+                    <img src="images/burgers-sandwiches.png" alt="Burgers & Sandwiches" width="400" height="250" loading="lazy">
+                    <span class="order-item-price">₹90</span>
+                  </div>
+                  <div class="order-item-info">
+                    <h4>Burgers & Sandwiches</h4>
+                    <p>Fresh burgers and sandwiches made with premium ingredients</p>
+                    <div class="order-item-actions">
+                      <div class="qty-selector">
+                        <button class="qty-btn qty-minus" aria-label="Decrease">−</button>
+                        <span class="qty-value">0</span>
+                        <button class="qty-btn qty-plus" aria-label="Increase">+</button>
+                      </div>
+                      <button class="order-item-btn" aria-label="Quick order Burgers & Sandwiches"><i class="fab fa-whatsapp"></i> Order Now</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Malabar Snacks -->
+                <div class="order-item" data-name="Malabar Snacks" data-price="99">
+                  <div class="order-item-img">
+                    <img src="images/malabar-snacks.png" alt="Malabar Snacks" width="400" height="250" loading="lazy">
+                    <span class="order-item-price">₹99</span>
+                  </div>
+                  <div class="order-item-info">
+                    <h4>Malabar Snacks</h4>
+                    <p>Traditional sweets and savory snacks with authentic flavors</p>
+                    <div class="order-item-actions">
+                      <div class="qty-selector">
+                        <button class="qty-btn qty-minus" aria-label="Decrease">−</button>
+                        <span class="qty-value">0</span>
+                        <button class="qty-btn qty-plus" aria-label="Increase">+</button>
+                      </div>
+                      <button class="order-item-btn" aria-label="Quick order Malabar Snacks"><i class="fab fa-whatsapp"></i> Order Now</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Pudding Cakes -->
+                <div class="order-item" data-name="Pudding Cakes" data-price="20">
+                  <div class="order-item-img">
+                    <img src="images/pudding-cakes.png" alt="Pudding Cakes" width="400" height="250" loading="lazy">
+                    <span class="order-item-price">₹20</span>
+                  </div>
+                  <div class="order-item-info">
+                    <h4>Pudding Cakes</h4>
+                    <p>Moist cakes made with dates, carrot, banana & chocolate</p>
+                    <div class="order-item-actions">
+                      <div class="qty-selector">
+                        <button class="qty-btn qty-minus" aria-label="Decrease">−</button>
+                        <span class="qty-value">0</span>
+                        <button class="qty-btn qty-plus" aria-label="Increase">+</button>
+                      </div>
+                      <button class="order-item-btn" aria-label="Quick order Pudding Cakes"><i class="fab fa-whatsapp"></i> Order Now</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Malabar Halwa -->
+                <div class="order-item" data-name="Malabar Halwa" data-price="99">
+                  <div class="order-item-img">
+                    <img src="images/halwa.png" alt="Malabar Halwa" width="400" height="250" loading="lazy">
+                    <span class="order-item-price">₹99</span>
+                  </div>
+                  <div class="order-item-info">
+                    <h4>Malabar Halwa</h4>
+                    <p>Traditional sweet treat with authentic Malabar flavors</p>
+                    <div class="order-item-actions">
+                      <div class="qty-selector">
+                        <button class="qty-btn qty-minus" aria-label="Decrease">−</button>
+                        <span class="qty-value">0</span>
+                        <button class="qty-btn qty-plus" aria-label="Increase">+</button>
+                      </div>
+                      <button class="order-item-btn" aria-label="Quick order Malabar Halwa"><i class="fab fa-whatsapp"></i> Order Now</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Custom Cakes -->
+                <div class="order-item" data-name="Custom Cakes" data-price="350">
+                  <div class="order-item-img">
+                    <img src="images/cakes.png" alt="Custom Cakes" width="400" height="250" loading="lazy">
+                    <span class="order-item-price">₹350</span>
+                  </div>
+                  <div class="order-item-info">
+                    <h4>Custom Cakes</h4>
+                    <p>Beautiful cakes for birthdays, weddings & special occasions</p>
+                    <div class="order-item-actions">
+                      <div class="qty-selector">
+                        <button class="qty-btn qty-minus" aria-label="Decrease">−</button>
+                        <span class="qty-value">0</span>
+                        <button class="qty-btn qty-plus" aria-label="Increase">+</button>
+                      </div>
+                      <button class="order-item-btn" aria-label="Quick order Custom Cakes"><i class="fab fa-whatsapp"></i> Order Now</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fresh Shakes -->
+                <div class="order-item" data-name="Fresh Shakes" data-price="99">
+                  <div class="order-item-img">
+                    <img src="images/shakes.png" alt="Fresh Shakes" width="400" height="250" loading="lazy">
+                    <span class="order-item-price">₹99</span>
+                  </div>
+                  <div class="order-item-info">
+                    <h4>Fresh Shakes</h4>
+                    <p>Creamy and refreshing milkshakes with delicious flavors</p>
+                    <div class="order-item-actions">
+                      <div class="qty-selector">
+                        <button class="qty-btn qty-minus" aria-label="Decrease">−</button>
+                        <span class="qty-value">0</span>
+                        <button class="qty-btn qty-plus" aria-label="Increase">+</button>
+                      </div>
+                      <button class="order-item-btn" aria-label="Quick order Fresh Shakes"><i class="fab fa-whatsapp"></i> Order Now</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Mobile: Inline action buttons -->
+              <div class="panel-mobile-actions" id="panel1-actions">
+                <button class="summary-btn summary-btn-primary" id="inline-next-1" disabled>
+                  <i class="fas fa-arrow-right"></i> Continue to Details
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Delivery Details -->
+            <div class="order-panel" id="panel-address">
+              <div class="address-form">
+                <h2 class="section-title" style="font-size: var(--fs-2xl); margin-bottom: var(--space-sm);">Delivery Details</h2>
+                <p class="section-desc" style="margin-bottom: var(--space-2xl);">Tell us where to deliver your order.</p>
+
+                <div class="order-type-toggle">
+                  <button class="order-type-btn active" data-type="delivery"><i class="fas fa-truck"></i> Delivery</button>
+                  <button class="order-type-btn" data-type="pickup"><i class="fas fa-store"></i> Pickup</button>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="order-name">Full Name <span class="required">*</span></label>
+                  <input type="text" id="order-name" class="form-input" placeholder="Enter your full name" required>
+                  <p class="form-error" id="error-name">Please enter your name</p>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="order-phone">Phone Number <span class="required">*</span></label>
+                  <input type="tel" id="order-phone" class="form-input" placeholder="e.g. 9072460008" required>
+                  <p class="form-error" id="error-phone">Please enter a valid phone number</p>
+                </div>
+
+                <div id="delivery-fields">
+                  <div class="form-group">
+                    <label class="form-label" for="order-address">Delivery Address <span class="required">*</span></label>
+                    <textarea id="order-address" class="form-textarea" placeholder="House/Flat No., Street, Area, Landmark" rows="3" required></textarea>
+                    <p class="form-error" id="error-address">Please enter your delivery address</p>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="order-area">Area / Locality</label>
+                      <input type="text" id="order-area" class="form-input" placeholder="e.g. Pannicode">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="order-pincode">Pincode</label>
+                      <input type="text" id="order-pincode" class="form-input" placeholder="e.g. 673602" maxlength="6">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="order-notes">Special Instructions</label>
+                  <textarea id="order-notes" class="form-textarea" placeholder="Any special requests? (e.g. extra spicy, no onion)" rows="2"></textarea>
+                </div>
+
+                <!-- Mobile: Inline action buttons -->
+                <div class="panel-mobile-actions" id="panel2-actions">
+                  <button class="summary-btn summary-btn-primary" id="inline-next-2">
+                    <i class="fas fa-check"></i> Review Order
+                  </button>
+                  <button class="summary-btn summary-btn-outline" id="inline-back-2">
+                    <i class="fas fa-arrow-left"></i> Back to Menu
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3: Review & Checkout -->
+            <div class="order-panel" id="panel-checkout">
+              <div class="checkout-review">
+                <h2 class="section-title" style="font-size: var(--fs-2xl); margin-bottom: var(--space-sm);">Review Your Order</h2>
+                <p class="section-desc" style="margin-bottom: var(--space-2xl);">Confirm everything looks good before sending to WhatsApp.</p>
+
+                <div class="checkout-card">
+                  <div class="checkout-section">
+                    <h4 class="checkout-section-title"><i class="fas fa-utensils"></i> Order Items</h4>
+                    <div id="checkout-items"></div>
+                    <div class="checkout-total" id="checkout-total"></div>
+                  </div>
+
+                  <div class="checkout-section">
+                    <h4 class="checkout-section-title"><i class="fas fa-user"></i> Customer Details</h4>
+                    <div id="checkout-customer"></div>
+                  </div>
+
+                  <div class="checkout-section" id="checkout-delivery-section">
+                    <h4 class="checkout-section-title"><i class="fas fa-map-marker-alt"></i> Delivery Address</h4>
+                    <div id="checkout-address"></div>
+                  </div>
+
+                  <div class="checkout-section" id="checkout-notes-section" style="display:none;">
+                    <h4 class="checkout-section-title"><i class="fas fa-sticky-note"></i> Special Instructions</h4>
+                    <p id="checkout-notes" class="checkout-detail"></p>
+                  </div>
+                </div>
+
+                <!-- Mobile: Inline action buttons -->
+                <div class="panel-mobile-actions" id="panel3-actions">
+                  <button class="summary-btn summary-btn-whatsapp" id="inline-checkout">
+                    <i class="fab fa-whatsapp"></i> Send Order via WhatsApp
+                  </button>
+                  <button class="summary-btn summary-btn-outline" id="inline-back-3">
+                    <i class="fas fa-arrow-left"></i> Edit Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Order Summary (Desktop) -->
+          <div class="order-summary" id="order-summary">
+            <h3 class="order-summary-title">Your Order</h3>
+            <div class="summary-items" id="summary-items">
+              <div class="summary-empty">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Your cart is empty</span>
+              </div>
+            </div>
+            <div class="summary-total" id="summary-total-wrap" style="display:none;">
+              <span class="summary-total-label">Estimated Total</span>
+              <span class="summary-total-price" id="summary-total">₹0</span>
+            </div>
+
+            <!-- Dynamic buttons based on step -->
+            <div id="summary-actions">
+              <button class="summary-btn summary-btn-primary" id="btn-next" disabled>
+                <i class="fas fa-arrow-right"></i> Continue to Details
+              </button>
+            </div>
+            <p class="summary-note"><i class="fas fa-info-circle"></i> Final price will be confirmed on WhatsApp. Prices shown are starting prices.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo"><img src="images/logo.png" alt="Malabar Bakes" width="40" height="40"><span>Malabar Bakes</span></div>
+            <p>Premium bakery and café in Pannicode, Kozhikode. Serving fresh shawarma, baked goods, juices, and more since 12+ years.</p>
+            <div class="footer-social">
+              <a href="https://instagram.com/malabarbakes_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/919072460008" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          <div><h4 class="footer-heading">Pages</h4><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+          <div><h4 class="footer-heading">Specialties</h4><ul class="footer-links"><li><a href="menu.html">Fresh Shawarma</a></li><li><a href="menu.html">Fried Chicken</a></li><li><a href="menu.html">Custom Cakes</a></li><li><a href="menu.html">Fresh Juices</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p>© <span id="year">2024</span> Malabar Bakes. All rights reserved.</p><p>Pannikkode Bus Stop, Mavoor Road, Kozhikode, Kerala 673602</p></div>
+        <div class="footer-credit"><p>Developed by <a href="https://aidletech.in" target="_blank" rel="noopener">AidleTech</a></p></div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Floating Cart (Mobile) -->
+  <div class="floating-cart" id="floating-cart">
+    <div class="floating-cart-info">
+      <span class="floating-cart-count" id="floating-count">0</span>
+      <span class="floating-cart-text">View Order</span>
+    </div>
+    <span class="floating-cart-price" id="floating-price">₹0</span>
+  </div>
+
+  <!-- Mobile Summary Modal -->
+  <div class="mobile-summary-overlay" id="mobile-summary">
+    <div class="mobile-summary-panel">
+      <div class="mobile-summary-handle"></div>
+      <h3 class="order-summary-title">Your Order</h3>
+      <div class="summary-items" id="mobile-summary-items"></div>
+      <div class="summary-total" id="mobile-total-wrap" style="display:none;">
+        <span class="summary-total-label">Estimated Total</span>
+        <span class="summary-total-price" id="mobile-total">₹0</span>
+      </div>
+      <div id="mobile-summary-actions">
+        <button class="summary-btn summary-btn-primary" id="mobile-btn-next" disabled>
+          <i class="fas fa-arrow-right"></i> Continue to Details
+        </button>
+        <button class="summary-btn summary-btn-outline" id="mobile-btn-close">Close</button>
+      </div>
+      <p class="summary-note"><i class="fas fa-info-circle"></i> Final price confirmed on WhatsApp.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <script src="js/animations.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/order.js"></script>
+
+</body>
+</html>
